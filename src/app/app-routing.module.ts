@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'footer',
+    loadChildren: () => import('./page/footer/footer.module').then( m => m.FooterPageModule)
+  },
 ];
 
 @NgModule({
