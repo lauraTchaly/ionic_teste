@@ -20,7 +20,7 @@ export class HomePage implements OnInit{
   private actionSheet: ActionSheetController,
 
   // OBJETO PARA MANIPULAR OS SERVIÇOS DA CLASSE SERVIÇOS
-  private utilidade: UtilityService
+  private utilidades: UtilityService
 
   ) {}
 
@@ -29,11 +29,73 @@ export class HomePage implements OnInit{
 
   // CARREGAR O MÉTODO DO INÍCIO DA PÁGINA
 
-  ngOnInit(): {
+  ngOnInit(){
+
+    this.utilidades.carregando("Aguarde...", 2000);
+    this.DataBase.getItem().subscribe(results => this.listaProdutos = results)
     
   }
 
+  // MÉTODO DO BOTÃO EXCLUIR
+  deletar(id: number){
+     try{
+
+       this.DataBase.delItem(id);
+     }catch(err){
+
+       console.log(err);
+     }finally{
+
+        // CASO NÃO OCORRA NENHUM ERRO
+        // O ITEM SERÁ EXCLUIDO E APARECERÁ
+        // A MENSAGEM PARA O USUÁRIO
+      this.utilidades.tostando("Item Excluido","bottom", 2000, "danger")
+     
+  }
+
+}
+
+// MÉTODO DO actionSheet
+async actionMetod(item: Produto){
+   const action = this.actionSheet.create({
+
+      mode: 'ios',
+      header: 'Selecione uma opção',
+      buttons: [
+
+        {
+
+          text: item.status ? 'Desmarcar':'Marcar',
+          icon: item.status ? 'radio-button-off': 'checkmark-circle',
+
+          handler:() => {
+
+            item.status = !item.status;
+            this.DataBase.statusItem(item);
+          }
+
+        },
+
+          {
+
+             text: 'Cancelar',
+             handler: () => {
+               this.utilidades.tostando('Ação cancelada', "middle", 2000, 'secondary');
 
 
+             }
 
+          }
+      ]
+
+   }); (await action).present();
+
+      setTimeout(this.refresh, 2000);
+
+ }
+
+//MÉTODO DO RELOAD
+refresh(){
+   location.reload();
+ }
 }

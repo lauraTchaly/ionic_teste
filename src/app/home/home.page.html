@@ -49,7 +49,7 @@
 
   <ion-item-sliding *ngFor="let produto of listaProdutos">
 
-    <ion-item (click)="actionMetod(produto">
+    <ion-item (click)="actionMetod(produto)">
 
       <!-- BOLINHA BRANCA - OPÇÃO RADIO -->
       <ion-icon name="radio-button-off" *ngIf="!produto.status"></ion-icon>
@@ -61,19 +61,19 @@
 
       </ion-label>
 
-      <ion-label *ngIf="!produto.status">
+      <!-- <ion-label *ngIf="!produto.status">
 
         <strong>Categoria:</strong>
 
-        {{produto.Categoria}}
+        {{produto.cat}}
 
-     </ion-label>
+     </ion-label> -->
 
      <ion-label *ngIf="!produto.status">
 
       <strong>Quantidade:</strong>
 
-      {{produto.Quantidade}}
+      {{produto.quantidade}}
 
    </ion-label>
 
@@ -84,25 +84,25 @@
 
       <del>
           <strong>Produto:</strong>
-              {{Produto.produto}}
+              {{produto.produto}}
       </del>
 
    </ion-label>
-
+<!-- 
    <ion-label *ngIf="produto.status">
 
     <del>
         <strong>Categoria:</strong>
-            {{Produto.Categoria}}
+            {{produto.cat}}
     </del>
 
- </ion-label>
+ </ion-label> -->
 
  <ion-label *ngIf="produto.status">
 
   <del>
       <strong>Quantidade:</strong>
-          {{Produto.Quantidade}}
+          {{produto.quantidade}}
   </del>
 
 </ion-label>
