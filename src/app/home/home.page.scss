@@ -27,6 +27,9 @@
 // }
 
 ion-list{
+
+   ion-item-sliding{
+   ion-item-options{
    ion-item-option{
        
       border-radius: 30%;
@@ -34,5 +37,7 @@ ion-list{
       margin-left: 1%;
 
    }
+}
+}
 }
 
