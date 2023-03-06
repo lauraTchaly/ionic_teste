@@ -48,4 +48,15 @@ UpdateItem(id: any, item: Produto){
   this.HttpOptions).subscribe()
 }
 
+// MÉTODO PARA CADASTRAR UM ITEM
+posItem(dados: any){
+
+    return this.http.post(
+      this.API, JSON.stringify(dados),
+      this.HttpOptions).subscribe()
+
+}
+
+
+
 }

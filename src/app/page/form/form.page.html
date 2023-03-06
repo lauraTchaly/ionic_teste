@@ -17,19 +17,19 @@
 
   </ion-label>
  
-  <form  >
+  <form #form="ngForm" (ngSubmit)="update(form)" >
     <!-- #form="ngForm" (ngSubmit)="update(form)" -->
 <ion-item class="form">
     <ion-input type="text" name="produto" [ngModel]="produto.produto" placeholder="Nome do produto"></ion-input>
   </ion-item>
 
   <ion-item class="form">
-    <ion-input type="text" name="cat" [ngModel]="produto.cat" placeholder="Categoria"></ion-input>
+    <ion-input type="text" name="cat" [ngModel]="produto.categoria" placeholder="Categoria"></ion-input>
   </ion-item>
 
 
     <ion-item class="form">
-    <ion-input type="number" name="quant" [ngModel]="produto.quant" placeholder="Quantidade"></ion-input>
+    <ion-input type="number" name="quant" [ngModel]="produto.quantidade" placeholder="Quantidade"></ion-input>
   </ion-item>
 
     <ion-button type="submit" color="danger" expand="block"> Atualizar </ion-button>
