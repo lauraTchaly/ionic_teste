@@ -7,25 +7,15 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    //COMANDO QUE DIZ QUE ESSA PÁGINA APARECERÁ SEMPRE, EM TODAS AS OUTRAS
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'footer',
     pathMatch: 'full'
   },
+ 
   {
-    path: 'home',
-    loadChildren: () => import('./page/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'form',
+    path: 'form/:id',
     loadChildren: () => import('./page/form/form.module').then( m => m.FormPageModule)
-  },
-  {
-    path: 'contato',
-    loadChildren: () => import('./page/contato/contato.module').then( m => m.ContatoPageModule)
-  },
-  {
-    path: 'sobre',
-    loadChildren: () => import('./page/sobre/sobre.module').then( m => m.SobrePageModule)
   },
   {
     path: 'menu',

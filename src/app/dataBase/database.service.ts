@@ -49,7 +49,7 @@ UpdateItem(id: any, item: Produto){
 }
 
 // MÉTODO PARA CADASTRAR UM ITEM
-posItem(dados: any){
+postItem(dados: any){
 
     return this.http.post(
       this.API, JSON.stringify(dados),

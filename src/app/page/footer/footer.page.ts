@@ -5,46 +5,76 @@ import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-footer',
-  templateUrl: './footer.page.html',
-  styleUrls: ['./footer.page.scss'],
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss'],
 })
-export class FooterPage implements OnInit {
+export class FooterComponent implements OnInit {
 
   constructor(
-    private database: DatabaseService,
-    private alertctrl: AlertController,
-
-    // Serviços de interação com o usuário
-    private utilidades: UtilityService
+     //Nosso serviço de banco de dados
+     private DataBase: DatabaseService,
+     //alertController - Ferramente que cria um alert
+     private alertCtrl: AlertController,
+      //Serviço de utilidades 
+    private utilidades: UtilityService   
   ) { }
 
   ngOnInit() {}
 
-  // Método do alertando
+
+  //Método do alertando 
   async alertando(){
-
-    const alert = this.alertctrl.create({
-
-      mode: "ios",
-      header:"Cadastro de Produto",
+    const alert = this.alertCtrl.create({
+      mode:'ios',
+      header: 'Cadastro de Produtos',
       inputs:[
         {
-          name:"produto",
-          type:"text",
-          placeholder:"Informe o produto"
+          name: 'item',
+          type: 'text',
+          placeholder: 'Informe o Produto'
         },
         {
-          name:"cat",
-          type:"text",
-          placeholder:"Informe a Categoria"
-        },
+          name:'qtd',
+          type: 'text',
+          placeholder: 'Informe a Quantidade'
+        }
+      ],
+      buttons: [
+
+        //Botão de cancelar
         {
-          name:"qtr",
-          type:"number",
-          placeholder:"Informe a Quantidade"
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            this.utilidades.tostando('Cancelado!', "middle",2000 ,"secondary" );
+          }
+        },
+
+        //Botão de cadastrar
+        {
+          text: 'Cadastrar',
+          handler: (form) => {
+            //Objeto que irá forma nosso item da lista
+            let item = {
+              produto: form.item,
+              quantidade: form.qtd, 
+
+              //Vai ser a variavel de controle do ngIf
+              status: false     
+            };
+            try{
+              this.DataBase.postItem(item);
+            }catch(err){
+              console.log(err)
+            }finally{
+              this.utilidades.tostando("Item Cadastrado", "top", 2000,"success");                           
+            } 
+          }
         }
       ]
-    })
+    });
+
+    (await alert).present();
   }
 
 }
