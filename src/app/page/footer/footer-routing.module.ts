@@ -27,7 +27,7 @@ const routes: Routes = [
         pathMatch: 'full'
       }
     ]
-  }
+  },
   {
     path: '',
     redirectTo: '/home',
