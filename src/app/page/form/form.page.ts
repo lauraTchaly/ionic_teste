@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Produto } from 'src/app/model/produto';
-import { DatabaseService } from 'src/app/dataBase/database.service';
-import { UtilityService } from 'src/app/dataBase/Utility.service';
+import { Produtos } from 'src/app/model/produto.model';
+
+import { DatabaseService } from 'src/app/servico/database.service';
+import { UtilityService } from 'src/app/servico/utility.service';
 
 @Component({
   selector: 'app-form',
@@ -11,39 +12,32 @@ import { UtilityService } from 'src/app/dataBase/Utility.service';
 })
 export class FormPage implements OnInit {
 
-  constructor(   
-    
-    private activateRouter: ActivatedRoute,
-    private router: Router,
-    private banco: DatabaseService,
-    private util: UtilityService
-
-    ) { 
-  }
-  routeId = null; //Variável que guarda a rota
+  image = "https://cdn.pixabay.com/photo/2015/02/23/20/53/tomatoes-646645_960_720.jpg";
+  routeId = null;
   produto: any = {};
 
+  constructor(
+    //Essa ferramnete server para captura a rota (caminho) que estiver ativo
+    private activatedRoute: ActivatedRoute,
+    private banco: DatabaseService,
+    private router: Router,
+    private util: UtilityService
+  ) { }
+
   ngOnInit() {
-  this.routeId =
-  this.activateRouter.snapshot.params['id'];
-
-  if(this.routeId){
-    // Se o id do produto for encontrado
-    // Ativa o banco de dados
-
-     this.banco.getOneItem(this.routeId).subscribe(caixa => {this.produto = caixa});
-
-  }}
-
-   update(form: any){
-
-     this.banco.UpdateItem(this.routeId, form);
-     this.router.navigate;
-     this.util.tostando("Item Atualizado com sucesso","middle", 2000, "medium");
-
+    this.routeId = this.activatedRoute.snapshot.params['id'];
+   
+    if(this.routeId){
+      //Tras o item do banco de dados
+      this.banco.getOneItem(this.routeId).subscribe(caixa => {this.produto = caixa});
+    }
   }
 
-
+  //Método que chama o serviço de atualização
+  update(form: any){
+    this.banco.updateItem(form.value, this.routeId);
+    this.router.navigate(['']);
+    this.util.toastando("Item Atualizado com sucesso", "middle", 2000, "medium");
   }
 
-
+}

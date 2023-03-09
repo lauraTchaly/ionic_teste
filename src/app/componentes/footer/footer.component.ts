@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from 'src/app/dataBase/database.service';
-import { UtilityService } from 'src/app/dataBase/Utility.service';
 import { AlertController } from '@ionic/angular';
+import { DatabaseService } from 'src/app/servico/database.service';
+import { UtilityService } from 'src/app/servico/utility.service';
 
 @Component({
   selector: 'app-footer',
@@ -46,7 +46,7 @@ export class FooterComponent implements OnInit {
           text: 'Cancelar',
           role: 'cancel',
           handler: () => {
-            this.utilidades.tostando('Cancelado!', "middle",2000 ,"secondary" );
+            this.utilidades.toastando('Cancelado!', "middle",2000 ,"secondary" );
           }
         },
 
@@ -67,7 +67,7 @@ export class FooterComponent implements OnInit {
             }catch(err){
               console.log(err)
             }finally{
-              this.utilidades.tostando("Item Cadastrado", "top", 2000,"success");                           
+              this.utilidades.toastando("Item Cadastrado", "top", 2000,"success");                           
             } 
           }
         }

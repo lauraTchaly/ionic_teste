@@ -1,47 +1,30 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar color="dark" mode="ios">
-
-    <ion-button slot="start" color="danger" routerLink="/home">VOLTAR</ion-button>
-
-    <ion-title>Cadastre sua lista de compras</ion-title>
-
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Shopping List
+    </ion-title>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
-  <ion-label class="f">
-    <p>
-      item
-    </p>
+  <ion-img [src]="image"></ion-img> 
+  
+  <form #form="ngForm" (ngSubmit)="update(form)">
 
-  </ion-label>
- 
-  <form #form="ngForm" (ngSubmit)="update(form)" >
-    <!-- #form="ngForm" (ngSubmit)="update(form)" -->
-<ion-item class="form">
-    <ion-input type="text" name="produto" [ngModel]="produto.produto" placeholder="Nome do produto"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label>Item:</ion-label>
+      <ion-input type="text" name="produto" [ngModel]="produto.produto"></ion-input>
+    </ion-item>
 
-  <ion-item class="form">
-    <ion-input type="text" name="cat" [ngModel]="produto.categoria" placeholder="Categoria"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label>Quantidade:</ion-label>
+      <ion-input type="text" name="quantidade" [ngModel]="produto.quantidade"></ion-input>
+    </ion-item>
 
-
-    <ion-item class="form">
-    <ion-input type="number" name="quant" [ngModel]="produto.quantidade" placeholder="Quantidade"></ion-input>
-  </ion-item>
-
-    <ion-button type="submit" color="danger" expand="block"> Atualizar </ion-button>
-
+    <ion-button type="submit" color="success" expand="block">Atualizar</ion-button>
   </form>
-
-
-
-
-
-
-
-
 
 </ion-content>

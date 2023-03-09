@@ -1,39 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>contato</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true">
+    <ion-toolbar color="dark" mode="ios">
+      <ion-title>
+        Shopping List
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
 
-  <ion-card>
 
-     <img class="img" src="/assets/lista.jpg" alt="Imagem de Contato">
-     
-     <ion-card-title>
-       Agradecemos o seu contato
-     </ion-card-title>
-     <ion-card-subtitle >
-
-     </ion-card-subtitle>
-
-     <ion-card-header>
-
-      <ion-icon class="icon" name="call"></ion-icon>
-      <ion-label> Telefone: (21) 9999-9999</ion-label>
-<br>
-<br>
-
-      <ion-icon class="icon" name="mail"></ion-icon>
-      <ion-label> E-mail:frutas@gmail.com</ion-label>
-  <br>
-
-
-
-
-     </ion-card-header>
-
-     
+<ion-card>
+    <img alt="Silhouette of mountains" [src]="image" />
+    <ion-card-header>
+      <ion-card-title>Contatos</ion-card-title>
+      <ion-card-subtitle><ion-icon name="call-outline"></ion-icon> <ion-label>  (21) 99999-9999</ion-label></ion-card-subtitle>
+      <ion-card-subtitle><ion-icon name="mail-open-outline"></ion-icon><ion-label> contato@shopping.com.br</ion-label></ion-card-subtitle>
+      <ion-card-subtitle><ion-icon name="logo-facebook"></ion-icon><ion-label> facebook.com/shopping</ion-label></ion-card-subtitle>
+      <ion-card-subtitle><ion-icon name="logo-instagram"></ion-icon><ion-label> instagram.com/shopping</ion-label></ion-card-subtitle>   
+    </ion-card-header>  
   </ion-card>
 
 </ion-content>

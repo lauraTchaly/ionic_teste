@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //import { FooterPage } from './footer.page';
-import { FooterPage } from './footer.page';
-
+import { FooterComponent } from 'src/app/componentes/footer/footer.component';
 const routes: Routes = [
   {
     path: '',
-    component: FooterPage,
+    component: FooterComponent,
     children:[
       {
         path: 'home',

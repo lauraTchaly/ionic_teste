@@ -1,17 +1,19 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-import { ContatoPage } from './contato.page';
+import { ContatoPage } from "./contato.page";
 
+//Variavel que contem o caminho para o componente( page ) que será carragado nessa rota filha
 const routes: Routes = [
-  {
-    path: '',
-    component: ContatoPage
-  }
+    //Rotas Simples
+    {path: '', component: ContatoPage}
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+
+    //RouterModule popssui as ferramentas para criação de rotas
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-export class ContatoPageRoutingModule {}
+
+export class ContatoPageRoutingModule{}

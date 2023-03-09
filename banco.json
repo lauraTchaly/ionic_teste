@@ -1,51 +1,43 @@
-
 {
-
-   "lista": [
+  "lista": [
     {
-      "id": 1,
       "produto": "Arroz",
-      "categoria" : "pereciveis",
-      "quantidade": "5kg",
+      "quantidade": "9kg",
+      "id": 1,
       "status": false
     },
-
-    
     {
-
-      "id": 2,
+      "id": 3,
+      "produto": "Macarrão",
+      "categoria": "Perecíveis",
+      "quantidade": "500g",
+      "status": false
+    },
+    {
+      "id": 4,
+      "produto": "Água",
+      "categoria": "Liquidos",
+      "quantidade": "1L",
+      "status": false
+    },
+    {
+      "id": 5,
+      "produto": "Coca-Cola",
+      "categoria": "Liquidos",
+      "quantidade": "2L",
+      "status": false
+    },
+    {
+      "produto": "Guaraná",
+      "quantidade": "10",
+      "status": false,
+      "id": 6
+    },
+    {
       "produto": "Feijão",
-      "categoria" : "Perecíveis",
-      "quantidade": "1kg",
-      "status": false    
-
-    },
-
-    {
-        "id": 3,
-        "produto": "Macarrão",
-        "categoria" : "Perecíveis",
-        "quantidade": "500g",
-        "status": false      
-
-    },
-    {
-        "id": 4,
-        "produto": "Água",
-        "categoria" : "Liquidos",
-        "quantidade": "1L",
-        "status": false      
-
-    },
-    {
-        "id": 5,
-        "produto": "Coca-Cola",
-        "categoria" : "Liquidos",
-        "quantidade": "2L",
-        "status": false      
-
+      "quantidade": "5KG",
+      "status": false,
+      "id": 7
     }
-
-   ]
-
+  ]
 }

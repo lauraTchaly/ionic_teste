@@ -1,20 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 
-import { IonicModule } from '@ionic/angular';
+import { FormsModule } from "@angular/forms";
+import { IonicModule } from "@ionic/angular";
+import { ContatoPageRoutingModule } from "./contato-routing.module";
 
-import { ContatoPageRoutingModule } from './contato-routing.module';
-
-import { ContatoPage } from './contato.page';
+import { ContatoPage } from "./contato.page";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ContatoPageRoutingModule
-  ],
-  declarations: [ContatoPage]
+    imports:[
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ContatoPageRoutingModule
+    ],
+    declarations: [ContatoPage]
 })
-export class ContatoPageModule {}
+export class ContatoPageModule{}
