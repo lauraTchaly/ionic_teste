@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-icon name="information-circle-outline" class="parceria" (click)="ListaDeParcerias()"></ion-icon>
+ 
+
+
+
+    <ion-title slot="start">Carrinho de Compras</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="6" *ngFor="let pedido of pedido.itens">
+
+        <ion-card *ngIf="pedido.prato.tipo == 'Prato'">
+          <ion-card-header>
+            <img src="{{prato?.imagem}}">
+            <ion-card-title class="titleconfig">{{pedido?.prato.nome}}</ion-card-title>
+            <ion-card-subtitle>{{pedido?.prato.desrcicao}}</ion-card-subtitle>
+            <ion-card-subtitle>R$ {{pedido?.prato.valor}}</ion-card-subtitle>
+
+          </ion-card-header>  
+
+         
+
+          <ion-button color="warning" expand="full" (click)="viewPrato(pedido?.prato)">+Detalhes</ion-button>
+
+          <ion-button color="medium" expand="full" (click)="removeCar(pedido?.prato)">Excluir-Pedido</ion-button>
+
+
+
+        </ion-card>
+
+        <ion-card *ngIf="pedido.prato.tipo == 'Vegano'">
+          <ion-card-header>
+            <img src="{{prato?.imagem}}">
+            <ion-card-title class="titleconfig">{{pedido?.prato.nome}}</ion-card-title>
+            <ion-card-subtitle>{{pedido?.prato.desrcicao}}</ion-card-subtitle>
+            <ion-card-subtitle>R$ {{pedido?.prato.valor}}</ion-card-subtitle>
+
+          </ion-card-header>
+        
+          <ion-button color="warning" expand="full" (click)="ViewPratoVegano(pedido?.prato)">+Detalhes</ion-button>
+
+          <ion-button color="medium" expand="full" (click)="removeCar(pedido?.prato)">ExcluirPedido</ion-button>
+
+        </ion-card>
+
+
+        <ion-card *ngIf="pedido.prato.tipo == 'Vegetariano'">
+          <ion-card-header>
+            <img src="{{pratovegetariano?.imagem}}">
+            <ion-card-title class="titleconfig01">{{pedido?.prato.nome}}</ion-card-title>
+            <ion-card-subtitle>{{pedido?.prato.desrcicao}}</ion-card-subtitle>
+            <ion-card-subtitle>R$ {{pedido?.prato.valor}}</ion-card-subtitle>
+
+          </ion-card-header>
+
+          <ion-button color="warning" expand="full" (click)="ViewPratoVegetariano(pedido?.prato)">+Detalhes</ion-button>
+          <ion-button color="medium"  expand="full" (click)="removeCar(pedido?.prato)">ExcluirPedido</ion-button>
+
+        </ion-card>
+
+
+      </ion-col>
+
+
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
+  <h5>Total: R$: {{total}},00</h5>
+
+</ion-content>
+
+<ion-footer>
+
+  <ion-button expand="full" color="medium" (click)="ListaDePratos()" class="pedido">Adicionar Pedido</ion-button>
+
+  <ion-button expand="full" color="danger" (click)="FinalizarCompra()" class="pedido">Finalizar Compra</ion-button>
+
+</ion-footer>

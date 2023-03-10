@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Finalizar Pedido</ion-title>
+    <ion-icon slot="start" name="arrow-back" style="width: 30px; height: 50px; " (click)="Carrinho()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<form [formGroup]="formGroup" class="contactform">
+
+  <ion-toolbar color="medium">
+    <ion-title>Dados de Pagamento</ion-title>
+  </ion-toolbar>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome:</ion-label>
+      <ion-input formControlName="nome" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Endereço:</ion-label>
+      <ion-input formControlName="endereco" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Bairro:</ion-label>
+      <ion-input formControlName="bairro" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Cidade:</ion-label>
+      <ion-input formControlName="cidade" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Cep:</ion-label>
+      <ion-input formControlName="cep" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Cpf:</ion-label>
+      <ion-input formControlName="cpf" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefone:</ion-label>
+      <ion-input formControlName="telefone" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email:</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+
+    </ion-item>
+
+    <ion-toolbar color="medium">
+      <ion-title>Formas de Pagamento</ion-title>
+    </ion-toolbar>
+
+    
+
+     <ion-radio-group>
+        <ion-item>
+         
+          <ion-icon name="logo-usd"></ion-icon>
+          <ion-label>Dinheiro</ion-label>
+          <ion-radio slot="end" value="s" checked></ion-radio>
+        </ion-item>
+
+        <ion-item>
+         
+            <ion-icon name="logo-usd"></ion-icon>
+            <ion-label>Cartão Credito/Debito</ion-label>
+            <ion-radio slot="end" onclick="checked" value="n"></ion-radio>
+          </ion-item>
+    
+       
+      </ion-radio-group>
+
+
+  </ion-list>
+
+</form>
+
+<ion-footer>
+
+  <ion-button (click)="subimtForm()" expand="full" [disabled]="!formGroup.valid">
+    Finalizar Pagamento
+  </ion-button>
+
+</ion-footer>

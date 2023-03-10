@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="success">
+
+
+    <ion-icon (click)="ListaDePratos()" slot="start" name="arrow-back" class="css"></ion-icon>
+
+    <ion-icon slot="end" name="cart" class="css" (click)="Carrinho()"></ion-icon>
+
+   
+
+    <ion-title>Promoções Do Dia !!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="6" *ngFor="let promocao of ListaDePromocoes">
+        <ion-card>
+          <ion-card-header>
+            <img src="{{promocao?.imagem}}" (click)="viewPrato(promocao)">
+            <ion-card-title  class="titleconfig">{{promocao?.nome}}</ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
+            <ion-card-subtitle></ion-card-subtitle>
+            <ion-card-subtitle class="valorconfig">{{promocao?.valor}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <div>
+            <ion-button expand="full" color="danger" (click)="addCarrinho(promocao)">
+              <h3>Pedir Prato</h3>
+              <img src="../../assets/imagens/logo3.png" class="css">
+            </ion-button>
+          </div>
+
+        
+
+        </ion-card>
+
+      </ion-col>
+
+
+    </ion-row>
+
+  </ion-grid>
+
+
+
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button>
+            <ion-icon name="cart"></ion-icon>
+            <ion-badge color="primary">{{pedido.itens.length}}</ion-badge>
+          </ion-fab-button>
+        </ion-fab>
+
+</ion-content>

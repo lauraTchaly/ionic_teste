@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-icon (click)="Home()" slot="start" name="arrow-back" class="iconeconf"></ion-icon>
+    <ion-title>
+      <ion-row>
+        <ion-col size="2">
+          <img src="{{imagem}}" class="perfil1"/>
+        </ion-col>
+        <ion-col size="10">
+          <ion-title class="perfil2">{{Nutricionista?.nome}}</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="!isLoading">
+  <div class="fd-login">
+
+    <div class="message-wrap">
+
+      <div *ngFor="let msg of conversa">
+
+        <ion-grid>
+
+        <div class="sender1" *ngIf="msg.idSender == idUsuario">
+          <p class="sender12">{{msg.mensagem}}</p>
+        </div>
+
+        <div class="sender2" *ngIf="msg.idSender != idUsuario">
+          <p>{{msg.mensagem}}</p>
+        </div>
+
+        </ion-grid>
+      </div>
+
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar color="dark">
+    <ion-textarea placeholder="Digite aqui..." name="message" slot="start" #txtarea></ion-textarea>
+    <ion-icon slot="end" name="send" color="medium" class="iconeconf" (click)="enviarMensagem()"></ion-icon>
+  </ion-toolbar>
+
+</ion-footer>

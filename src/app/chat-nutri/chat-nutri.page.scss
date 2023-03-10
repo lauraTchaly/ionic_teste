@@ -1,0 +1,74 @@
+.iconeconf{
+  width: 50px;
+  height: 30px;
+  }
+
+  .sender1{
+    margin-right: 200px;
+    background-color: #58D3F7;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  .sender2{
+    margin-left: 200px;
+    background-color: #9FF781;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  .balao {
+    font-family: 'open sans';
+    font-size: .85em;
+    margin: 0 auto; 
+    background: #000;
+    border-radius: 0 30px 30px 0;
+    width: 300px;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    background-color: #5e35b1;
+  
+    position: relative;
+    margin-bottom: 1em;
+}
+.balao:after{
+    content: "";
+    width: 0; 
+    height: 0;
+
+    position: absolute;
+
+    right: -32px;
+
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #5e35b1; 
+   
+    border-radius: 50%;
+
+}
+
+input[type='file'] {
+  display: none
+}
+
+/* Aparência que terá o seletor de arquivo */
+.perfilx {
+
+  --background: url(../../assets/imagens/1.gif) no-repeat;
+
+}
+
+.perfil1{
+  height: 43px;
+  width: 43px;
+  border-radius: 50%;
+}
+
+.perfil2{
+  margin-top: 10px;
+  font-size: 22px;
+}

@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-icon (click)="Home()" slot="start" name="arrow-back" class="iconeconf"></ion-icon>
+
+    <div class="div">
+      <ion-row class="row">
+        <ion-col size="2">
+          <img src="{{picture}}" class="perfil1" (click)="Perfil()" />
+        </ion-col>
+        <ion-col size="7">
+          <ion-title class="perfil2">Treino em Casa</ion-title>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+
+      <ion-card-header class="color">
+        <ion-tab-button>
+          <ion-label class="cor">DESAFIO</ion-label>
+        </ion-tab-button>
+      </ion-card-header>
+
+      <ion-tab-button (click)="Instrucoes()">
+        <ion-label class="ins">INSTRUÇÕES</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="Ciencia()">
+        <ion-label class="ins">CIÊNCIA</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+
+  <ion-card class="baixo" (click)="Imc()">
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="speedometer" slot="start" class="nov"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-label class="mov">Calcule seu IMC</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="stats" slot="end" class="nov"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="preto" (click)="TreinoCorpoInteiro()">
+
+    <ion-card-header class="fundo">
+      <div class=container4>
+        <p>Treino de corpo inteiro</p>
+
+      </div>
+
+    </ion-card-header>
+    <li slot="start">27 dias restantes </li>
+    <ion-progress-bar value="0.1"></ion-progress-bar>
+  </ion-card>
+
+  <ion-card (click)="AbdomensTreino()">
+    <ion-card-header class="fundoA">
+      <div class=container4>
+        <p>Treino abdominal</p>
+      </div>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="BracoTreino()">
+    <ion-card-header class="fundoB">
+      <div class=container4>
+        <p>Treino de braços</p>
+      </div>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="PernaTreino()">
+    <ion-card-header class="fundoP">
+      <div class=container4>
+        <p>Treino de pernas</p>
+      </div>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="GluteosTreino()">
+    <ion-card-header class="fundoG">
+      <div class=container4>
+        <p>Treino de glúteos</p>
+      </div>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

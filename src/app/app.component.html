@@ -1,3 +1,75 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar class="Menuzao" color="dark">
+
+          <ion-row>
+            <ion-col size="3">
+              <img src="{{picture}}" class="perfilMenu" />
+            </ion-col>
+            <ion-col size="9">
+              <ion-card-title class="Menuzin"> {{Usuario?.nome}} {{Usuario?.sobrenome}}</ion-card-title>
+            </ion-col>
+          </ion-row>
+          <ion-card-title class="Menuzin2">
+            <ion-icon ios="ios-at" md="md-at"></ion-icon> {{usuarioEmail}}
+          </ion-card-title>
+          <ion-card-title class="Menuzin4">
+            <ion-icon ios="ios-tablet-portrait" md="md-tablet-portrait"></ion-icon> {{Usuario?.cel}}
+          </ion-card-title>
+          <ion-card-title class="Menuzin5">
+            <ion-icon ios="ios-map" md="md-map"></ion-icon> {{Usuario?.cidade}}
+          </ion-card-title>
+
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content class="menu-app menu-lateral">
+        <ion-list>
+          <ion-title class="Menuzin3">Menu</ion-title>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
+
+<!--
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="menu-app menu-lateral">
+        
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+-->

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="warning">
+
+    <ion-icon (click)="Home()" slot="start" name="arrow-back" class="volta"></ion-icon>
+
+    <ion-title>Ciencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+
+
+      <ion-tab-button>
+        <ion-label class="ins" (click)="Treino()">DESAFIO</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button>
+        <ion-label class="ins" (click)="Instrucoes()">INSTRUÇÕES</ion-label>
+      </ion-tab-button>
+
+      <ion-card-header class="color">
+        <ion-tab-button>
+          <ion-label class="cor">CIÊNCIA</ion-label>
+        </ion-tab-button>
+      </ion-card-header>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/imagens/saude.jpg">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p class="tt">A importância do exercício físico para a saúde </p>
+      <p class="pp" style="text-align: justify; padding: 0px 10px 0px 10px;">A prática de exercícios físicos envolve
+        muito
+        mais que estética, uma vez que são
+        inúmeros os benefícios proporcionados a quem pratica algum tipo de atividade.
+        Algumas pesquisas revelam que a prática de exercícios eleva o nível de alguns neurotransmissores no cérebro,
+        responsáveis pelo nosso humor. Além de aumentar a produção de endorfinas, diminui a tensão muscular e baixa o
+        hormônio do estresse. Estas mudanças, na mente e no corpo,
+        podem melhorar a ansiedade, depressão, nervosismo e autoconfiança, melhorando assim o humor.</p>
+    </ion-col>
+  </ion-row>
+</ion-content>

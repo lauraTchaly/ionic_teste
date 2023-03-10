@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro de PratoVegano</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    
+ <form [formGroup]="formGroup">
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input formControlName="nome" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Descricao</ion-label>
+        <ion-input formControlName="descricao" type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Ingrediente</ion-label>
+        <ion-input formControlName="ingrediente" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Valor</ion-label>
+        <ion-input formControlName="valor" type="text"></ion-input>
+      </ion-item>
+   
+    
+
+      <ion-item>
+        <ion-icon name="images"></ion-icon>
+        <input type="file" (change)="pegarImagem($event)" />
+      </ion-item>
+      <img src="{{foto}}" >
+
+    </ion-list>
+
+  
+    <ion-button expand="full" (click)="cadastrar()">Cadastre seu produto</ion-button>
+  </form>
+  
+</ion-content>

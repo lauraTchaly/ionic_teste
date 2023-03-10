@@ -1,0 +1,53 @@
+
+   ion-card-subtitle{
+    font-family: Trebuchet ;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    
+  }
+ 
+  ion-card-title{
+    text-align: center;
+    font-family: Lucida ;
+    font-size: 18px;
+    color: white;
+
+  }
+  .css{
+    width: 50px;
+    height: 30px;
+    color: white;
+   
+  }
+  .valor{
+    color: white;
+    text-align: end;
+    font-family: Impact;
+    font-size: 30px;
+  }
+  ion-card{
+    background-color: black;
+  }
+  ion-title{
+    color: white;
+    font-family:  monospace;
+  }
+
+  .Carr{
+    width: 50px;
+    height: 30px;
+    color: white;
+  }
+
+  ion-button{
+    color: white;
+  }
+ 
+  ion-content.background{
+    // --ion-background-color:black;
+     --background: url(../../assets/imagens/mesa7.jpg);
+   }
+   .img{
+    border-radius: 50%;
+   }

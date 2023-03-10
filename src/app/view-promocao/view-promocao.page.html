@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Promoçãoview</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src="{{imagem}}">
+
+  <ion-item>
+    <input type="file" (change)="enviaArquivo($event)" />
+  </ion-item>
+
+  <ion-content>
+    <form [formGroup]="formGroup">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Nome</ion-label>
+          <ion-input formControlName="nome" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Descrição</ion-label>
+          <ion-input formControlName="descricao" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Ingrediente</ion-label>
+            <ion-input formControlName="ingrediente" type="text"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label floating>Valor</ion-label>
+          <ion-input formControlName="valor" type="text"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" (click)="atualizar()">Atualizar</ion-button>
+    </form>
+  </ion-content>

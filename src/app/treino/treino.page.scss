@@ -1,0 +1,129 @@
+.volta{
+    width: 50px;
+    height: 30px;
+    color: black;
+  }
+ 
+  ion-title{
+      color: black;
+  }
+
+
+.cor{
+    color: white;
+  }
+
+  .color{
+    background-color: black;
+  }
+
+  .ins{
+    color: black;
+  }
+
+  .escolha{
+    width: 70px;
+    height: 70px;
+  }
+  .baixo{
+    margin-top: 60px;
+    --ion-background-color:rgb(160, 166, 179);
+  }
+  .fundo{
+    margin-top: 1px;
+    --background: url(../../assets/imagens/corpo.jpg);  
+    
+  }
+  
+  .fundoA{
+    margin-top: 1px;
+    --background: url(../../assets/imagens/abdomen.jpg);  
+  }
+ 
+  .fundoB{
+    margin-top: 1px;
+    --background: url(../../assets/imagens/braco.jpg);  
+  }
+
+  .fundoP{
+    margin-top: 1px;
+    --background: url(../../assets/imagens/perna.jpg);  
+  }
+ 
+  .fundoG{
+    margin-top: 1px;
+    --background: url(../../assets/imagens/gluteos.jpg);  
+  }
+ 
+  ion-card-header{
+    height: 150px;
+  }
+
+  .mov{
+    margin-left: 30px;
+    font-family: Verdana;
+    color: white;
+    font-size: 22px;
+  }
+
+  div.container4 {
+    height: 8em;
+    position: relative }
+div.container4 p {
+    margin: 0;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: Impact;
+    font-size: 28px;
+  
+  }
+
+  .iconeconf{
+    width: 50px;
+    height: 30px;
+  }
+
+  .nov{
+    color: white;
+    width: 50px;
+    height: 30px;
+  }
+  li{
+    color: white;
+  }
+  .preto{
+    background-color: black;
+  }
+
+  input[type='file'] {
+    display: none
+  }
+  
+  /* Aparência que terá o seletor de arquivo */
+  .perfilx {
+  
+    --background: url(../../assets/imagens/1.gif) no-repeat;
+  
+  }
+
+  .perfil1{
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  .perfil2{
+    margin-top: 18px;
+    margin-left: 10px;
+    font-size: 22px;
+  }
+  
+  .row{
+    text-align: center;
+  }

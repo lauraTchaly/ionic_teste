@@ -1,0 +1,62 @@
+.logo{
+  margin-top: 2%;
+  width: 90px;
+  height: 50px;
+}
+
+
+div{
+  text-align: center;
+}
+
+.div2{
+  margin: 0;
+  margin-right: 35px ;
+}
+
+.iconeconf{
+  width: 50px;
+  height: 30px;
+}
+
+.escolha{
+  width: 170px;
+  height: 170px;
+}
+
+h6{
+  font-family: Arial;
+  font-size: 15px;
+  color: #8B8989;
+}
+
+h3{
+  font-family: Monotype Corsiva;
+  font-size: 22px;
+}
+
+ion-content {
+  --background: #FFFAFA no-repeat center center / cover !important;
+}
+
+input[type='file'] {
+  display: none
+}
+
+/* Aparência que terá o seletor de arquivo */
+.perfilx {
+
+  --background: url(../../assets/imagens/1.gif) no-repeat;
+
+}
+
+.perfil1{
+  height: 43px;
+  width: 43px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.row{
+  text-align: center;
+}

@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+
+    <ion-icon (click)="Home()" slot="start" name="arrow-back" class="volta"></ion-icon>
+
+    <ion-icon slot="end" name="search" class="Procura" size="large" id="market" (click)="showFilter()"> </ion-icon>
+
+    <ion-icon slot="end" name="cart" class="css" (click)="Carrinho()"></ion-icon>
+
+
+
+
+    <ion-title>Pratos Vegetariano</ion-title>
+  </ion-toolbar>
+
+
+
+  <ion-slides pager="true" style="margin-top: 1px; width: 200px; height: 100px;" [options]="slideOpts">
+
+
+    <ion-slide>
+      <ion-img src="../assets/imagens/vg2.jpg"></ion-img>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-img src="../assets/imagens/vg3.jpg"></ion-img>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-img src="../assets/imagens/vg4.jpg"></ion-img>
+    </ion-slide>
+
+
+
+  </ion-slides>
+
+
+
+  <ion-fab vertical="center" horizontal="start" slot="fixed">
+    <img src="../../assets/imagens/3.gif" class="promocao" (click)="ListaDePromocoes()">
+  </ion-fab>
+
+
+  <ion-row>
+
+    <ion-searchbar color="dark" [ngStyle]="{'display':filtroBox}" #textoBusca animated placeholder="Procurar"
+      (ionChange)="busca()" (ionChange)="presentActionSheet()"></ion-searchbar>
+  </ion-row>
+
+
+</ion-header>
+
+
+
+<ion-content padding class="background">
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="cart"></ion-icon>
+      <ion-badge color="danger">{{pedido.itens.length}}</ion-badge>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button (click)="PratoView()">
+
+        <img src="../../assets/imagens/logobx.png" class="logo">
+        <ion-label class="preto">Cardápio</ion-label>
+
+      </ion-tab-button>
+
+      <ion-tab-button (click)="viewPratoVegano()">
+        <img src="../../assets/imagens/logovegano.png" class="logo">
+        <ion-label class="preto">Cardápio</ion-label>
+      </ion-tab-button>
+
+      <ion-card-header class="botom">
+
+        <ion-tab-button (click)="ListaDePratos()">
+          <img src="../../assets/imagens/logovegetarianoVerde.png" class="logo">
+         
+          <ion-label>VEGETARIANO</ion-label>
+        </ion-tab-button>
+
+      </ion-card-header>
+
+
+    </ion-tab-bar>
+
+
+  </ion-tabs>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="6" *ngFor="let pratovegetariano of  ListaDePratosVegetariano">
+
+        <ion-card class="fundo">
+
+          <ion-card-subtitle class="valorconfig">{{pratovegetariano?.valor}}</ion-card-subtitle>
+
+          <ion-card-header>
+            <img src="{{pratovegetariano?.imagem}}" (click)="viewPratoVegetariano(pratovegetariano)" class="transp">
+
+            <ion-card-title>{{pratovegetariano?.nome}}</ion-card-title>
+
+          </ion-card-header>
+
+
+          <div>
+            <ion-button color="danger" (click)="addCarrinho(pratovegetariano)">
+              <img src="../../assets/imagens/99Branco.png" class="pro" slot="start">
+
+
+
+            </ion-button>
+          </div>
+
+
+        </ion-card>
+
+      </ion-col>
+
+
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
+
+
+</ion-content>

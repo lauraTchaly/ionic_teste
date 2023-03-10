@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar class="fundoA">
+
+    <ion-icon (click)="TreinoCorpoInteiro()" slot="start" name="arrow-back" class="volta"></ion-icon>
+
+    <ion-title>Corpo inteiro</ion-title>
+
+  </ion-toolbar>
+
+  <ion-toolbar color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>5 Treinos</ion-label>
+
+        </ion-col>
+        <ion-col>
+          <ion-label>1° Dia Semana 1</ion-label>
+
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="baixo">
+    <ion-item>
+      <img src="../../assets/imagens/treino1.gif" slot="start" class="escolha">
+      <ion-label>Flexão na Caixa</ion-label>
+      <ion-icon name="checkmark" slot="end" ></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="baixo2">
+    <ion-item>
+      <img src="../../assets/imagens/treino2.gif" slot="start" class="escolha">
+      <ion-label>Flexões</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="baixo2">
+    <ion-item>
+      <img src="../../assets/imagens/treino3.gif" slot="start" class="escolha">
+      <ion-label>Abdominal</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="baixo2">
+    <ion-item>
+      <img src="../../assets/imagens/treino4.gif" slot="start" class="escolha">
+      <ion-label>Perna</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="baixo2">
+    <ion-item>
+      <img src="../../assets/imagens/treino5.gif" slot="start" class="escolha">
+      <ion-label>Costa</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+
+  <ion-button expand="full" (click)="VisualizarTreino()">
+    Iniciar
+  </ion-button>
+
+</ion-footer>

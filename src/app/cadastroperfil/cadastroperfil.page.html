@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon name="person" slot="start" class="pessoa"></ion-icon>
+    <ion-title>Continue seu cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- DADOS DO CADASTRO DO PERFIL PARA O CADASTRO QUE TÁ SENDO FEITO NA HOME -->
+<ion-content>
+  <div>
+    <form [formGroup]="formGroup" (ngSubmit)="entrar()">
+      <ion-list>
+
+        <ion-chip class="usuario" color="dark">
+          <ion-label >Preencha todos os campos abaixo</ion-label>
+        </ion-chip>
+        
+        <ion-item>
+          <ion-label class="text" position="floating">Nome:</ion-label>
+          <ion-input formControlName="nome" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="text" position="floating">Sobrenome:</ion-label>
+          <ion-input formControlName="sobrenome" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="text" position="floating">Telefone:</ion-label>
+          <ion-input formControlName="telefone" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="text" position="floating">Celular:</ion-label>
+          <ion-input formControlName="cel" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="text" position="floating">Cidade:</ion-label>
+          <ion-input formControlName="cidade" type="text"></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <ion-button class="botao" expand="default" type="submit" color="dark" (click)="entrar()">Concluir
+      </ion-button>
+    </form>
+  </div>
+
+</ion-content>

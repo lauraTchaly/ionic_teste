@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CadastroDePromoçao</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <form [formGroup]="formGroup">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input formControlName="nome" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input formControlName="descricao" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Ingrediente</ion-label>
+          <ion-input formControlName="ingrediente" type="text"></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-label floating>Valor</ion-label>
+        <ion-input formControlName="valor" type="text"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+  </form>
+</ion-content>

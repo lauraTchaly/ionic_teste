@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-icon (click)="Home()" slot="start" name="arrow-back" class="volta"></ion-icon>
+    <ion-title class="titulo">Perfil</ion-title>
+
+    <ion-icon slot="end" (click)="deslogar()" name="log-out" class="volta"></ion-icon>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content *ngIf="!isLoading">
+  <ion-card>
+
+    <ion-card-title class="t">{{Nutricionista?.nome}} {{Nutricionista?.sobrenome}}</ion-card-title>
+
+    <ion-card-header>
+      <img src="{{imagem}}" class="perfil" />
+    </ion-card-header>
+
+    <ion-toolbar color="medium">
+      <ion-card-title class="cor1">
+        <ion-icon ios="ios-call" md="md-call"></ion-icon> Telefone: {{Nutricionista?.telefone}}
+      </ion-card-title>
+      <ion-card-title class="cor2">
+        <ion-icon ios="ios-tablet-portrait" md="md-tablet-portrait"></ion-icon> Celular: {{Nutricionista?.cel}}
+      </ion-card-title>
+      <ion-card-title class="cor2">
+        <ion-icon ios="ios-map" md="md-map"></ion-icon> Cidade: {{Nutricionista?.cidade}}
+      </ion-card-title>
+    </ion-toolbar>
+  </ion-card>
+
+</ion-content>

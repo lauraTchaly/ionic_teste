@@ -1,26 +1,72 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 @import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
 
-/* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+:root{
+    .menu-lateral{
+        --background: none;
+        background-color: #F8F8FF;
+        background-position: center center;
+       
+    }
+
+    .menu-lateral *{
+    color: #000 !important;
+    font-family: Monotype Corsiva;
+    font-size: 25px;
+    
+    }
+    .menu-lateral ion-item, .menu-lateral ion-menu-toggle,  .menu-lateral ion-list{
+        --background: none !important;
+        background-color: #F8F8FF;
+        
+    }
+    .Menuzao {
+        height: 150px;
+    }
+    .Menuzin {
+        color: #fff;
+        font-size: 26px;
+        margin-top: 20px;
+    }
+    .Menuzin2 {
+        color: #fff;
+        margin-left: 60px;
+        font-size: 19px;
+        margin-top: -10px;
+    }
+    .Menuzin4 {
+        color: #fff;
+        margin-left: 60px;
+        font-size: 19px;
+    }
+    .Menuzin5 {
+        color: #fff;
+        margin-left: 60px;
+        font-size: 19px;
+        
+    }
+    .Menuzin3 {
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: Monotype Corsiva;
+        font-size: 30px;
+        text-align: center;
+    }
+    .perfilMenu{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}

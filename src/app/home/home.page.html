@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+
+<!-- HOME DO APP TEM A FUNÇÃO CADASTRO DO USUÁRIO -->
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Faça seu login Usuário</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <div>
+    <img src="../../assets/imagens/logo.png" class="logo">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input #email></ion-input>
+    </ion-item>
+
+    <ion-item class="senha">
+      <ion-label position="floating" input type="">Senha</ion-label>
+      <ion-input type="password" #senha></ion-input>
+    </ion-item>
+
+    <ion-button class="botaologar" expand="full" color="dark" (click)="logar()">LOGAR</ion-button>
+    <ion-button expand="full" fill="outline" color="dark" (click)="cadastrar()">CADASTRAR</ion-button>
+
   </div>
+
 </ion-content>

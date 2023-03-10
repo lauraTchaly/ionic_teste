@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="warning">
+
+    <ion-icon (click)="Treino()" slot="start" name="arrow-back" class="volta"></ion-icon>
+
+    <ion-title>Instruções</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+
+      <ion-tab-button>
+        <ion-label class="ins" (click)="Treino()">DESAFIO</ion-label>
+      </ion-tab-button>
+
+      <ion-card-header class="color">
+        <ion-tab-button>
+          <ion-label class="cor">INSTRUÇÕES</ion-label>
+        </ion-tab-button>
+      </ion-card-header>
+
+      <ion-tab-button (click)="Ciencia()">
+        <ion-label class="ins">CIÊNCIA</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+
+  <ion-card (click)="TreinoCorpoInteiroInstrucao()" class="baixo">
+
+    <ion-card-header>
+
+      <ion-label class="cent">Treino de Corpo Inteiro</ion-label>
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="AbdomensTreinoInstrucao()">
+    <ion-card-header>
+
+      <ion-label class="cent">Treino abdominal</ion-label>
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="BracoTreinoInstrucao()">
+    <ion-card-header>
+
+      <ion-label class="cent">Treino de braços</ion-label>
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="PernaTreinoInstrucao()">
+    <ion-card-header>
+
+      <ion-label class="cent">Treino de pernas</ion-label>
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card (click)="GluteosTreinoInstrucao()">
+    <ion-card-header>
+
+      <ion-label class="cent">Treino de glúteos</ion-label>
+
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

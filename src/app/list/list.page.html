@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div>
+      <ion-row class="row">
+        <ion-col size="2">
+          <img src="{{picture}}" class="perfil1" (click)="Perfil()" />
+        </ion-col>
+        <ion-col size="9">
+          <img src="../../assets/imagens/logo2.png" class="logo">
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<div>
+  <ion-toolbar color="medium">
+    <ion-title>Escolha sua opção</ion-title>
+  </ion-toolbar>
+</div>
+
+<ion-content padding>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="../../assets/imagens/roda-alimento.png" class="escolha">
+          <h3>Alimentação</h3>
+          <h6>Faça seus pedidos</h6>
+          <ion-button expand="block" size="default" color="dark" (click)="HomeCm()">Ir</ion-button>
+        </ion-col>
+        <ion-col>
+          <img src="../../assets/imagens/nutricionista.png" class="escolha">
+          <h3>Nutricionista Online</h3>
+          <h6>Faça sua consulta</h6>
+          <ion-button expand="block" size="default" color="dark" (click)="ListaDeNutricionistas()">Ir</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="../../assets/imagens/exercicio.png" class="escolha">
+          <h3>Exercicios Físicos</h3>
+          <h6>Faça seus exercicios</h6>
+          <ion-button expand="block" size="default" color="dark" (click)="Treino()">Ir</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

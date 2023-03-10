@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="medium">
+
+
+    <ion-icon (click)="Carrinho()" slot="start" name="arrow-back" class="css"></ion-icon>
+
+
+    <ion-title>Informações</ion-title>
+  </ion-toolbar>
+
+
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-title class="t">Cartões Aceito</ion-title>
+      <img src="../../assets/imagens/visa.jpg" class="">
+
+      <ion-grid>
+        <ion-row>
+
+          <ion-col>
+            <ion-label>visa</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>MasterCard</ion-label>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="t">Horário de Atendimento</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+
+          <ion-col>
+            <ion-label>Segunda:</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>08:00 as 17:00</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>Terça:</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>08:00 as 17:00</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>Quarta:</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>08:00 as 17:00</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>Quinta:</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>08:00 as 17:00</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>Sexta:</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>08:00 as 17:00</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>Sabado:</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>08:00 as 17:00</ion-label>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+  </ion-card>
+
+
+
+  <ion-card *ngFor="let parceria of ListaDeParcerias">
+
+    <ion-card-header>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="{{parceria?.imagem}}" class="estilo">
+
+          </ion-col>
+          <ion-col>
+            <img src="../../assets/imagens/visa.jpg" class="logo">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-card-title>{{parceria?.nome}}</ion-card-title>
+      <ion-card-subtitle>{{parceria?.descricao}}</ion-card-subtitle>
+      <ion-card-subtitle>{{parceria?.endereco}}</ion-card-subtitle>
+      <ion-card-subtitle>{{parceria?.valor}}</ion-card-subtitle>
+
+    </ion-card-header>
+
+
+  </ion-card>
+
+
+
+</ion-content>
